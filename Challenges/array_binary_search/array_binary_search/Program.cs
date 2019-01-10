@@ -15,8 +15,25 @@ namespace array_binary_search
         {
             int min = 0;
             int max = binaryArray.Length - 1;
-        }
-                
+            while (min <= max)
+            {
+                int halfway = (min + max) / 2;
+                if (binaryArray[halfway] < searchKey)
+                {
+                    min = halfway + 1;
+                }
+
+                else if (binaryArray[halfway] > searchKey)
+                {
+                    max = halfway - 1;
+                }
+                else
+                {
+                    return halfway;
+                }
+            }
+            return -1;
+
         }
     }
 }
