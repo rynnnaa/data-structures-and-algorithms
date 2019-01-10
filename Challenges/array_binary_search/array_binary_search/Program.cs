@@ -2,9 +2,9 @@
 
 namespace array_binary_search
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
             int[] binaryArray = new int[] { 1, 2, 3, 4, 5, 6 };
             int searchKey = 3;
