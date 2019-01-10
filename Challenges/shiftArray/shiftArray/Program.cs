@@ -6,29 +6,42 @@ namespace data_structures_and_algorithms
     {
         static void Main(string[] args)
         {
-            int[] inputArray = new int[] { 1, 5, 9, 11 };
-            int addedInt = 7;
-            int halfway = outputArray.Length / 2;
+            ArrayShift();
+            Console.ReadLine();
         }
-        static void ArrayShift(int inputArray, int adddedInt);
 
-        int[] outputArray = new int[outputArrayLength];
-
-        int outputArrayLength = new int { inputArray.Length + 1 };
+        static void ArrayShift()
         {
-         for (int i = 0; i < outputArray.Length; i++);
-        if (i == halfway)
+            int[] initialArray = { 1, 5, 9, 11 };
+            int[] newArray = InsertArrayShift(initialArray, 7);
+            for (int i = 0; newArray.Length; i++)
             {
-            outputArray[i] = addedInt
+                Console.Write($"{newArray[i]}");
             }
-        if else(i < halfway)
-                {
-            outputArray[i] = inputArray[i];
-        else(if i > halfway)
-               { outputArray[i] = inputArray[i -1]
         }
-        
 
+        static voic InsertArrayShift(int[] inputArray, int[] adddedInt)
+        {
 
+            int[] inputArray = new int[inputArray.Length + 1];
+
+            decimal halfway = Math.Ceiling((decimal)(inputArray.Length + 1) / 2);
+            int iteration = 0;
+
+            for (int i = 0; i < inputArray.Length; i++) ;
+            {
+                if (i == halfway - 1)
+                {
+                    inputArray[i] = adddedInt;
+                }
+                else
+                {
+                    inputArray[i] = inputArray[iterator++];
+                }
+            }
+
+            return inputArray;
+        }
     }
+
 }
