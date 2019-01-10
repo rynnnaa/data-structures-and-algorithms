@@ -1,4 +1,6 @@
-DEveloper Ryna
+Developer: Ryna
+
+Contributions: Shalom
 
 Challenge Create a method that inputs an integer to the midpoint of a given array, then return the new array containing the new integer.
 
