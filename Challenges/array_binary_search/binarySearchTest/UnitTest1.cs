@@ -7,9 +7,11 @@ namespace binarySearchTest
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void notInArray()
         {
-
+            int[] binaryArray = { 1, 2, 3, 4, 5, 6 };
+            int searchKey = 7;
+            Assert.Equal(-1, Program.BinarySearch(binaryArray, searchKey));
         }
     }
 }
