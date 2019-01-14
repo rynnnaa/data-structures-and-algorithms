@@ -4,4 +4,4 @@
 
 [2.Array Binary Search](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/array_binary_search/array_binary_search/Program.cs)
 
-[EC.Fibonacci](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/fibonacci/fibonacci/Program.cs
+[EC.Fibonacci](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/fibonacci/fibonacci/Program.cs)
