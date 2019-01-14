@@ -12,6 +12,12 @@ namespace LinkedList
 
             LList list = new LList();
             int[] arr = { 1, 2, 3, 4, 5, 6 };
+            for (int i = 0; i < arr.Length; i++)
+            {
+                list.Insert(arr[i]);
+
+            }
+            list.Print();
         }
 
         
