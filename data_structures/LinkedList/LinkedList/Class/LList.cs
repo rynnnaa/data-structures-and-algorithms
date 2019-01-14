@@ -42,7 +42,7 @@ namespace LinkedList.Class
         public void Print()
         {
             Current = Head;
-            while (Current != null)
+            while(Current!= null)
             {
                 Console.Write(Current.Value + "  ");
                 Current = Current.Next;
@@ -50,3 +50,5 @@ namespace LinkedList.Class
         }
         //output to the console the linked list
     }
+}
+
