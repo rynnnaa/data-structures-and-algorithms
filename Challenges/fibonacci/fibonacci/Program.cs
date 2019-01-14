@@ -10,7 +10,7 @@ namespace fibonacci
             Console.WriteLine(answer);
         }
 
-        public static int fibonacci(int num)
+        public static int fibonacci(int num) 
         {
             int Num1 = 0;
             int Num2 = 1;
@@ -28,4 +28,4 @@ namespace fibonacci
         }
 
     }
-}
+} 

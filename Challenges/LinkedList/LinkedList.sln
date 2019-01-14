@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "matrix", "matrix\matrix.csproj", "{4134F5DC-CA15-45F3-8078-B57B36997161}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{925B7012-E9EE-422E-8425-A2EA9707CEF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4134F5DC-CA15-45F3-8078-B57B36997161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4134F5DC-CA15-45F3-8078-B57B36997161}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4134F5DC-CA15-45F3-8078-B57B36997161}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4134F5DC-CA15-45F3-8078-B57B36997161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925B7012-E9EE-422E-8425-A2EA9707CEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925B7012-E9EE-422E-8425-A2EA9707CEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925B7012-E9EE-422E-8425-A2EA9707CEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925B7012-E9EE-422E-8425-A2EA9707CEF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {262BDD32-6C7D-4381-BFD5-FD85CF8EE70C}
+		SolutionGuid = {D90D0726-A842-4285-932B-3947CDFE98FE}
 	EndGlobalSection
 EndGlobal
