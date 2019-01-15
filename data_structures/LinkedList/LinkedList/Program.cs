@@ -19,6 +19,8 @@ namespace LinkedList
             }
 
             list.Print();
+
+            list.Append();
         }
 
         
