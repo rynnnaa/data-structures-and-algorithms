@@ -49,6 +49,32 @@ namespace LinkedList.Class
             }
         }
 
+        public void Append(int value)
+        {
+            Current = Head;
+
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Node node = new Node(value);
+
+            Current.Next = node;
+
+        }
+
+        public void Nodes()
+        {
+            Node Current = Head;
+            while (Current.Next != null)
+            {
+                Console.WriteLine(Current.Value);
+                Current = Current.Next;
+            }
+            Console.WriteLine(Current.Value);
+        }
+
         public void Appened(int value)
         {
             while (Current.Next != null)
