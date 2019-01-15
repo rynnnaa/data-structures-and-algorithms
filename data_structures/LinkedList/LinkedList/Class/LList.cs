@@ -74,6 +74,27 @@ namespace LinkedList.Class
                 Current = Current.Next;
             }
         }
+
+            public void InsertAfter(int value, int newValue)
+            {
+                Current = Head;
+
+                while (Current.Next != null)
+                {
+
+                    if (Current.Value == value)
+                    {
+
+                        Node node = new Node(newValue);
+                        node.Next = Current.Next;
+                        Current.Next = node;
+                        return;
+                    }
+
+                    Current = Current.Next;
+                }
+            }
+        
     }
 }
 
