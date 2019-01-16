@@ -1,4 +1,5 @@
 ﻿using System;
+using LinkedList.Class;  
 
 namespace LinkedList
 {
@@ -13,8 +14,7 @@ namespace LinkedList
         public static int ValueAtEnd(int value)
         {
             int runner = 0;
-            int coutner = 0;
-
+            int counter = 0;
             LList list = new LList();
 
 
@@ -26,6 +26,7 @@ namespace LinkedList
             while (list.Current.Next != null)
             {
                 counter++;
+
                 if (counter >= value)
                 {
                     runner++;
