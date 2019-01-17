@@ -9,4 +9,4 @@ Time: O(n)
 Space: O(n)
 
 ## Solution
-[!Whiteboard](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/mergelinkedlist.jpg)
+![Whiteboard](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/mergelinkedlist.jpg)
