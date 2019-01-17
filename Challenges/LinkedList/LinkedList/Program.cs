@@ -1,9 +1,9 @@
 ﻿using System;
-using LinkedList.Class;  
+using LinkedList.Class;
 
 namespace LinkedList
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,8 +18,9 @@ namespace LinkedList
             LList list = new LList();
 
 
-            list.insert(2);
-            list.insert(3);
+            list.Insert(2);
+            list.Insert(3);
+            list.Insert(4);
 
             list.Current = list.Head;
 
@@ -48,14 +49,13 @@ namespace LinkedList
                     }
 
                     list.Current = list.Current.Next;
-                    {
 
-                        return -1;
-                    }
 
 
                 }
             }
+
+            return -1;
         }
     }
 }
