@@ -7,3 +7,5 @@
 [EC. Fibonacci](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/fibonacci/fibonacci/Program.cs)
 
 [3. Linked List](https://github.com/rynnnaa/data-structures-and-algorithms/tree/master/Challenges/LinkedList/LinkedList)
+
+[4. Merged Linked List](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/LinkedList/LinkedList/Program.cs)
