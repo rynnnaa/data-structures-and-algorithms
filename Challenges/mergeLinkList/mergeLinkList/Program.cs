@@ -21,11 +21,19 @@ namespace mergeLinkList
             list.Insert(6);
             list.Insert(8);
 
+            mergeLinkList(list, listTwo);
         }
 
-        public static void LList Merge(LList list, LList listTwo)
-        {
+        /// <summary>
+        /// Merging two linked list  in a zipper form
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="listTwo"></param>
+        /// <returns>New LList listThree</returns>
 
+        public static void LList MergeLinkedList(LList list, LList listTwo)
+        {
+            LList listThree = new LList();
         }
     }
 }
