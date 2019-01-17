@@ -21,7 +21,7 @@ namespace mergeLinkList
             list.Insert(6);
             list.Insert(8);
 
-            mergeLinkList(list, listTwo);
+            Merge(list, listTwo);
         }
 
         /// <summary>
@@ -31,9 +31,23 @@ namespace mergeLinkList
         /// <param name="listTwo"></param>
         /// <returns>New LList listThree</returns>
 
-        public static void LList MergeLinkedList(LList list, LList listTwo)
+        public static LList Merge(LList list, LList listTwo)
         {
             LList listThree = new LList();
+            list.Current = list.Head;
+            listTwo.Current = listTwo.Head;
+
+            while (list.Current != null || listTwo.Current != null)
+            {
+                listThree.Insert(listTwo.Current.Value);
+                listThree.Insert(listTwo.Current.Value);
+
+                list.Current = list.Current.Next;
+                listTwo.Current = listTwo.Current.Next;
+            }
+            listThree.Print();
+            return listThree;
         }
+        
     }
 }
