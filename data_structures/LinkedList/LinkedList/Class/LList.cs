@@ -8,29 +8,34 @@ namespace LinkedList.Class
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
-        public int value { get; private set; }
-
-        //public LList(NodeExample node)
-        //{
-        //    Head = node;
-        //}
-        public void Insert(int value) //Add to data structure {CREATE}
+        public void Insert(int value)
         {
-            Node node = new Node(value); //creating node circle
-            node.Next = Head; //drawing the arrows
-            Head = node; //moving head to the new node
+            Node node = new Node(value);
+            node.Next = Head;
+            Head = node;
         }
 
-        public bool Includes(int value) //does it exist, YES or NO (hence the return type, -> bool)
+        /// <summary>
+        /// Searches Linked List to see if node exists
+        /// </summary>
+        /// <param name="value">Value Node</param>
+        /// <returns>True if node exists and false if it does not</returns>
+        /// 
+
+
+        public bool Includes(int value)
         {
             Current = Head;
-            while (Current.Next != null) //not yet at the end of the linked list
+            while (Current.Next != null)
             {
                 if (Current.Value == value)
                 {
                     return true;
                 }
+
+                Current = Current.Next;
             }
+
             if (Current.Value == value)
             {
                 return true;
@@ -39,12 +44,13 @@ namespace LinkedList.Class
             return false;
         }
 
-        public void Print()
+        /// <summary>
+        /// Prints all existing Nodes to the Console
+        /// </summary>
+        public void PrintNodes()
         {
-            Current = Head;
-            while (Current != null)
             {
-                Console.Write(Current.Value + "  ");
+                Console.WriteLine(Current.Value);
                 Current = Current.Next;
             }
         }
@@ -120,7 +126,7 @@ namespace LinkedList.Class
                     Current = Current.Next;
                 }
             }
-        
+
     }
 }
 
