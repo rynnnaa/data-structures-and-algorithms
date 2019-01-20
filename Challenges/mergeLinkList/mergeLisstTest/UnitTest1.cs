@@ -23,5 +23,45 @@ namespace mergeLinkList
 
             Assert.Equal(1, newList.Current.Value);
         }
+
+        [Fact]
+        public void PlaceFromEndWorksAga()
+        {
+            //Arrange
+            int value = 1;
+
+            //Act
+            int result = Program.PlaceFromEnd(value);
+
+            //Assert
+            Assert.Equal(2, result);
+        }
+
+        [Fact]
+        public void PlaceFromEndWorks()
+        {
+            //Arrange
+            int value = 2;
+
+            //Act
+            int result = Program.PlaceFromEnd(value);
+
+            //Assert
+            Assert.Equal(3, result);
+        }
+
+        [Fact]
+        public void PlaceFromEndWorksAgain()
+        {
+            //Arrange
+            int value = 3;
+
+            //Act
+            int result = Program.PlaceFromEnd(value);
+
+            //Assert
+            Assert.Equal(4, result);
+        }
+
     }
-}
+    }
