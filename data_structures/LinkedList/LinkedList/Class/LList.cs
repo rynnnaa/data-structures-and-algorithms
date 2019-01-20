@@ -49,13 +49,84 @@ namespace LinkedList.Class
         /// </summary>
         public void PrintNodes()
         {
+            {
+                Console.WriteLine(Current.Value);
+                Current = Current.Next;
+            }
+        }
+
+        public void Append(int value)
+        {
+            Current = Head;
+
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Node node = new Node(value);
+
+            Current.Next = node;
+
+        }
+
+        public void Nodes()
+        {
             Node Current = Head;
             while (Current.Next != null)
             {
                 Console.WriteLine(Current.Value);
                 Current = Current.Next;
             }
+            Console.WriteLine(Current.Value);
         }
+
+        public void Appened(int value)
+        {
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+
+            Node node = new Node(value);
+            Current.Next = node;
+        }
+
+        public void InsertBefore(int value, int newValue)
+        {
+            while (Current.Next != null)
+            {
+                if (Current.Next.Value == value)
+                {
+                    Node node = new Node(newValue);
+                    node.Next = Current.Next;
+                    Current.Next = node;
+                    return;
+                }
+                Current = Current.Next;
+            }
+        }
+
+            public void InsertAfter(int value, int newValue)
+            {
+                Current = Head;
+
+                while (Current.Next != null)
+                {
+
+                    if (Current.Value == value)
+                    {
+
+                        Node node = new Node(newValue);
+                        node.Next = Current.Next;
+                        Current.Next = node;
+                        return;
+                    }
+
+                    Current = Current.Next;
+                }
+            }
+
     }
 }
 
