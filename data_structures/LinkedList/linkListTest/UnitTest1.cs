@@ -6,9 +6,8 @@ namespace XUnitTestProject1
 {
     public class UnitTest1
     {
-        //Tesing for the includes method
         [Fact]
-        public void Find()
+        public void CanFind()
         {
             //arrange
             LList list = new LList();
@@ -23,21 +22,7 @@ namespace XUnitTestProject1
 
         [Fact]
 
-        public void Find2()
-        {
-            //arrange
-            LList list = new LList();
-            list.Insert(2);
-
-            //act
-            bool found = list.Includes(2);
-
-            //assert
-            Assert.True(found);
-        }
-
-        [Fact]
-        public void Find3()
+        public void CanFind2()
         {
             //arrange
             LList list = new LList();
@@ -50,9 +35,24 @@ namespace XUnitTestProject1
             Assert.True(found);
         }
 
+        [Fact]
+
+        public void Find3()
+
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(2);
+
+            //act
+            bool found = list.Includes(9);
+
+            //assert
+            Assert.False(found);
+        }
 
         [Fact]
-        public void AddNumber()
+        public void CanAdd1()
         {
             //arrange
             LList list = new LList();
@@ -65,33 +65,181 @@ namespace XUnitTestProject1
             Assert.True(found);
         }
 
-        //testing insert method
-
         [Fact]
-        public void NodeValueIsTwo()
+        public void CanAdd2()
         {
-            LList testList = new LList();
-            testList.Insert(2);
-            Assert.True(testList.Head.Value == 2);
+            //arrange
+            LList list = new LList();
+            list.Insert(3);
+
+            //act
+            bool found = list.Includes(3);
+
+            //assert
+            Assert.True(found);
         }
 
         [Fact]
-        public void LastInsertIsHead()
+        public void CanAdd3()
         {
-            LList testList = new LList();
-            testList.Insert(4);
-            testList.Insert(2);
-            bool isHead = testList.Head.Value == 2;
-            Assert.True(isHead);
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+
+            //act
+            bool found = list.Includes(4);
+
+            //assert
+            Assert.True(found);
         }
 
         [Fact]
-        public void NodeHasNoCurrent()
+        public void CanAppend1()
         {
-            LList testList = new LList();
-            testList.Insert(1);
-            bool current = testList.Current == null;
-            Assert.True(current);
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Append(6);
+
+            //act
+            bool found = list.Includes(6);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAppend2()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Append(23);
+
+            //act
+            bool found = list.Includes(23);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAppend3()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Append(26);
+
+            //act
+            bool found = list.Includes(26);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAddBefore1()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(6);
+            list.InsertBefore(5, 6);
+
+            //act
+            bool found = list.Includes(5);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAddBefore2()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.InsertBefore(4, 3);
+
+            //act
+            bool found = list.Includes(3);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAddBefore3()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Insert(5);
+            list.InsertBefore(5, 22);
+
+            //act
+            bool found = list.Includes(22);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAddAfter()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Insert(6);
+            list.InsertAfter(5, 22);
+
+            //act
+            bool found = list.Includes(22);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAddAfter1()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Insert(6);
+            list.InsertAfter(5, 23);
+
+            //act
+            bool found = list.Includes(23);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void CanAddAfter3()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Insert(6);
+            list.Insert(7);
+            list.InsertAfter(6, 18);
+
+            //act
+            bool found = list.Includes(18);
+
+            //assert
+            Assert.True(found);
         }
     }
 }

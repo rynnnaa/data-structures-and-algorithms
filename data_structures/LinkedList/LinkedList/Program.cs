@@ -5,7 +5,7 @@ namespace LinkedList
 {
     public class Program
     {
-//call method
+        //call method
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -22,19 +22,21 @@ namespace LinkedList
             Node node = new Node(10);
             Console.WriteLine(node.Value);
             LList list = new LList();
+            list.Insert(1);
+            list.Insert(2);
             list.Insert(3);
-            list.Insert(10);
-            list.Insert(15);
+            list.Insert(4);
+            list.Insert(5);
+            list.Insert(6);
 
-            list.Append(11);
+            list.Append(7);
+            list.Append(30);
+            list.InsertBefore(4, 23);
 
-            list.InsertBefore(10, 22);
-
-            list.InsertAfter(3, 33);
+            list.InsertAfter(5, 14);
 
             list.Print();
+            Console.ReadLine();
         }
-
     }
 }
-
