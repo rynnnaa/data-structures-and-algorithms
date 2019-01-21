@@ -14,4 +14,4 @@ Space: O(1)
 
 ## Solution:
 
-![Whiteboard] (https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/nthFromEnd.jpg)
+![Whiteboard](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/nthFromEnd.jpg)
