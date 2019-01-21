@@ -94,6 +94,41 @@ namespace XUnitTestProject1
             Assert.True(current);
         }
 
+        // Tests the Append() method
+        [Fact]
+        public void AppendToPopulatedList()
+        {
+            LList testList = new LList();
+            testList.Insert(1);
+            testList.Insert(2);
+            testList.Insert(3);
+            testList.Append(25);
+            testList.Current = testList.Head;
+            while (testList.Current.Next != null)
+            {
+                testList.Current = testList.Current.Next;
+            }
+            Assert.True(testList.Current.Value == 25);
+        }
+
+        [Fact]
+        public void AppendToEmptyList()
+        {
+            LList testList = new LList();
+            testList.Append(10);
+            Assert.True(testList.Head.Value == 10);
+        }
+
+        [Fact]
+        public void AppendValue()
+        {
+            LList test = new LList();
+            test.Insert(34);
+            test.Append(66);
+            bool Booltest = test.Includes(66);
+            Assert.Equal(66, test.Head.Next.Value);
+        }
+
 
 
     }
