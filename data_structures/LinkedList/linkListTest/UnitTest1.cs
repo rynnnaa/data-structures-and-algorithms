@@ -1,8 +1,8 @@
-using LinkedList.Class;
 using System;
 using Xunit;
+using LinkedList.Class;
 
-namespace linkListTest
+namespace XUnitTestProject1
 {
     public class UnitTest1
     {
@@ -93,6 +93,5 @@ namespace linkListTest
             bool current = testList.Current == null;
             Assert.True(current);
         }
-
     }
 }

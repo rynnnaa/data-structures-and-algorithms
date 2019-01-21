@@ -19,18 +19,20 @@ namespace LinkedList
         /// </summary>
         static void CreateNodeAndList()
         {
+            Node node = new Node(10);
+            Console.WriteLine(node.Value);
             LList list = new LList();
-            list.Insert(1);
-            list.Insert(2);
             list.Insert(3);
-            list.Insert(4);
-            list.Insert(5);
-            list.Insert(6);
+            list.Insert(10);
+            list.Insert(15);
 
-            Console.WriteLine($"Does 2 exist: {list.Includes(3)}");
-            Console.WriteLine($"Does 5 exist: {list.Includes(5)}");
-            list.PrintNodes();
-            Console.ReadLine();
+            list.Append(11);
+
+            list.InsertBefore(10, 22);
+
+            list.InsertAfter(3, 33);
+
+            list.Print();
         }
 
     }
