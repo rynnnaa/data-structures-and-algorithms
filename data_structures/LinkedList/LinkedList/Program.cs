@@ -9,6 +9,7 @@ namespace LinkedList
         {
             Console.WriteLine("Hello World!");
 
+        }
 
             LList list1 = new LList();
             int[] arr = { 1, 2, 3, 4, 5, 6 };
