@@ -185,23 +185,23 @@ namespace XUnitTestProject1
         public void InsertsAfterHead()
         {
             LList testList = new LList();
-            testList.Insert(11);
-            testList.Insert(22);
-            testList.Insert(33);
-            testList.InsertAfter(33, 5);
+            testList.Insert(9);
+            testList.Insert(10);
+            testList.Insert(30);
+            testList.InsertAfter(30, 5);
             testList.Current = testList.Head;
-            Assert.True(testList.Current.Value == 33);
+            Assert.True(testList.Current.Value == 30);
             Assert.True(testList.Current.Next.Value == 5);
         }
         [Fact]
-        public void InsertsAfteLast()
+        public void InsertsAfterLast()
         {
             LList testList = new LList();
-            testList.Insert(44);
-            testList.Insert(55);
-            testList.Insert(66);
-            testList.Insert(77);
-            testList.InsertAfter(44, 0);
+            testList.Insert(40);
+            testList.Insert(56);
+            testList.Insert(57);
+            testList.Insert(68);
+            testList.InsertAfter(40, 0);
             testList.Current = testList.Head;
             while (testList.Current.Next != null)
             {
@@ -218,10 +218,10 @@ namespace XUnitTestProject1
             list.Insert(4);
             list.Insert(5);
             list.Insert(6);
-            list.InsertAfter(5, 22);
+            list.InsertAfter(5, 42);
 
             //act
-            bool found = list.Includes(22);
+            bool found = list.Includes(42);
 
             //assert
             Assert.True(found);
