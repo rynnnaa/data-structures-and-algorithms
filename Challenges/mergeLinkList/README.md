@@ -17,4 +17,4 @@ Big O Time = O(n) - The method must first traverse the entire list to measure th
 
 Output:
 
-[Output](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/MergeLists.PNG)
+![Output](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/MergeLists.PNG)
