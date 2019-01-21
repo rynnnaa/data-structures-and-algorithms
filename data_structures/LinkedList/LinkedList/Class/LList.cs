@@ -47,12 +47,16 @@ namespace LinkedList.Class
         /// <summary>
         /// Prints all existing Nodes to the Console
         /// </summary>
-        public void PrintNodes()
+        public void Print()
         {
+            Current = Head;
+            Console.Write("Values of linked list: ");
+            while (Current.Next != null)
             {
-                Console.WriteLine(Current.Value);
+                Console.Write($"{Current.Value}, ");
                 Current = Current.Next;
             }
+            Console.WriteLine($"{Current.Value}");
         }
 
         public void Append(int value)
