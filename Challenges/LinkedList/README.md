@@ -1,3 +1,7 @@
+Developer: Ryna
+
+Contributions: Jason Few, Andrew Hinojosa
+
 # kth from the end of a Linked List
 Taking k in as a parameter, return the node value that is k from the end of the linked list
 
