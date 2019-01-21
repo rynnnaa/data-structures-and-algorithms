@@ -19,4 +19,4 @@ The Print method takes in no arguments and outputs all sof the current Node valu
 
 OutPut:
 
-[!Pic]()
+[!Pic](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/data_structures/assets/linked_list_capture.PNG)
