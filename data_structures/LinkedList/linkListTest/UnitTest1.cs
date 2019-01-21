@@ -6,17 +6,6 @@ namespace linkListTest
 {
     public class UnitTest1
     {
-
-            [Fact]
-            public void Find()
-            {using LinkedList.Class;
-using System;
-using Xunit;
-
-namespace linkListTest
-{
-    public class UnitTest1
-    {
         //Tesing for the includes method
         [Fact]
         public void Find()
