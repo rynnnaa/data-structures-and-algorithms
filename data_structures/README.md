@@ -1,3 +1,6 @@
+Developer: Ryna
+Contributions: Andrew Hinojsa, Jason Few
+
 # Singly Linked List
 Implement a Singly Linked List Data Structure
 Append values, Insert Before, Insert After
