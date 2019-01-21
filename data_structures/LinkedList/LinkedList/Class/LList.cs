@@ -8,6 +8,7 @@ namespace LinkedList.Class
     {
         public Node Head { get; set; }
         public Node Current { get; set; }
+
         public void Insert(int value)
         {
             Node node = new Node(value);
@@ -16,10 +17,10 @@ namespace LinkedList.Class
         }
 
         /// <summary>
-        /// Searches Linked List to see if node exists
+        /// Search Linked List to see if node exists
         /// </summary>
         /// <param name="value">Value Node</param>
-        /// <returns>True if node exists and false if it does not</returns>
+        /// <returns>True if node exists, false if it does not</returns>
         /// 
 
 
@@ -43,6 +44,8 @@ namespace LinkedList.Class
 
             return false;
         }
+
+
 
         /// <summary>
         /// Prints all existing Nodes to the Console
