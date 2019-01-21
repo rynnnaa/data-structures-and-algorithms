@@ -13,6 +13,7 @@ namespace LinkedList
 
         }
 
+
         /// <summary>
         /// Creates a new Linked list and inserts new Nodes
         /// </summary>
@@ -31,5 +32,7 @@ namespace LinkedList
             list.PrintNodes();
             Console.ReadLine();
         }
+
     }
 }
+
