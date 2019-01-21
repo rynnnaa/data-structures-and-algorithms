@@ -21,6 +21,7 @@ Global
 		{50152AB7-3007-48D7-A882-6328003FDCA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50152AB7-3007-48D7-A882-6328003FDCA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50152AB7-3007-48D7-A882-6328003FDCA9}.Release|Any CPU.Build.0 = Release|Any CPU
+
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
