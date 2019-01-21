@@ -21,6 +21,7 @@ namespace XUnitTestProject1
         }
 
         [Fact]
+
         public void CanFind2()
         {
             //arrange
@@ -35,7 +36,9 @@ namespace XUnitTestProject1
         }
 
         [Fact]
-        public void CanNotFind()
+
+        public void Find3()
+
         {
             //arrange
             LList list = new LList();
