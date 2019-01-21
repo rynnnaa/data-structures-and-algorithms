@@ -96,7 +96,7 @@ namespace XUnitTestProject1
 
         // Tests the Append() method
         [Fact]
-        public void AppendToPopulatedList()
+        public void AppendToList()
         {
             LList testList = new LList();
             testList.Insert(1);
@@ -129,7 +129,103 @@ namespace XUnitTestProject1
             Assert.Equal(66, test.Head.Next.Value);
         }
 
+        //testing insert before method
 
+        [Fact]
+        public void InsertBefore()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(5);
+            list.Insert(6);
+            list.InsertBefore(6, 4);
+
+            //act
+            bool found = list.Includes(3);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void InsertBefore2()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.InsertBefore(4, 3);
+
+            //act
+            bool found = list.Includes(3);
+
+            //assert
+            Assert.True(found);
+        }
+
+        [Fact]
+        public void InsertBefore3()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(8);
+            list.Insert(9);
+            list.InsertBefore(8, 7);
+
+            //act
+            bool found = list.Includes(3);
+
+            //assert
+            Assert.True(found);
+        }
+
+        //testing insert after method
+
+        [Fact]
+        public void InsertsAfterHead()
+        {
+            LList testList = new LList();
+            testList.Insert(11);
+            testList.Insert(22);
+            testList.Insert(33);
+            testList.InsertAfter(33, 5);
+            testList.Current = testList.Head;
+            Assert.True(testList.Current.Value == 33);
+            Assert.True(testList.Current.Next.Value == 5);
+        }
+        [Fact]
+        public void InsertsAfteLast()
+        {
+            LList testList = new LList();
+            testList.Insert(44);
+            testList.Insert(55);
+            testList.Insert(66);
+            testList.Insert(77);
+            testList.InsertAfter(44, 0);
+            testList.Current = testList.Head;
+            while (testList.Current.Next != null)
+            {
+                testList.Current = testList.Current.Next;
+            }
+            Assert.True(testList.Current.Value == 0);
+        }
+
+        [Fact]
+        public void InsertAfter()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(4);
+            list.Insert(5);
+            list.Insert(6);
+            list.InsertAfter(5, 22);
+
+            //act
+            bool found = list.Includes(22);
+
+            //assert
+            Assert.True(found);
+        }
 
     }
 }
