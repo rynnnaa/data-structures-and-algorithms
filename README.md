@@ -8,6 +8,6 @@
 
 [3. Linked List Insetions](https://github.com/rynnnaa/data-structures-and-algorithms/tree/master/Challenges/LinkedList/LinkedList)
 
-[5. Kth from the end]()
+[4. Kth from the end]()
 
-[4. Merged Linked List](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/mergeLinkList/mergeLinkList/Program.cs)
+[5. Merged Linked List](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/mergeLinkList/mergeLinkList/Program.cs)
