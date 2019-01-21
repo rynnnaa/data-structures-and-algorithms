@@ -8,38 +8,57 @@ namespace mergeLinkList
     public class UnitTest1
     {
         [Fact]
-        public void CanMerge()
-
-        {
-
-            LList list = new LList();
-            list.Insert(2);
-
-            LList listTwo = new LList();
-            listTwo.Insert(3);
-
-            LList newList = Program.Merge(list, listTwo);
-            newList.Current = newList.Head;
-
-            Assert.Equal(1, newList.Current.Value);
-        }
-
-        [Fact]
-        public void CanMergeTwo()
+        public void MergeWorks()
         {
             //arrange
             LList list = new LList();
-            list.Insert(4);
+            list.Insert(1);
 
-            LList listTwo = new LList();
-            listTwo.Insert(5);
+            LList list2 = new LList();
+            list2.Insert(2);
 
             //act
-            LList newList = Program.Merge(list, listTwo);
-            newList.Current = newList.Head;
+            LList newL = Program.Merge(list, list2);
+            newL.Current = newL.Head;
 
             //assert
-            Assert.Equal(2, newList.Current.Value);
+            Assert.Equal(1, newL.Current.Value);
+        }
+
+        [Fact]
+        public void MergeWorksTwo()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(2);
+
+            LList list2 = new LList();
+            list2.Insert(1);
+
+            //act
+            LList newL = Program.Merge(list, list2);
+            newL.Current = newL.Head;
+
+            //assert
+            Assert.Equal(2, newL.Current.Value);
+        }
+
+        [Fact]
+        public void MergeWorksThree()
+        {
+            //arrange
+            LList list = new LList();
+            list.Insert(3);
+
+            LList list2 = new LList();
+            list2.Insert(1);
+
+            //act
+            LList newL = Program.Merge(list, list2);
+            newL.Current = newL.Head;
+
+            //assert
+            Assert.Equal(3, newL.Current.Value);
         }
     }
 }
