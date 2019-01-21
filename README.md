@@ -6,7 +6,7 @@
 
 [EC. Fibonacci](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/fibonacci/fibonacci/Program.cs)
 
-[3. Linked List Insetions](https://github.com/rynnnaa/data-structures-and-algorithms/tree/master/data_structures/LinkedList)
+[3. Linked List Insetions](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/LinkedList/LinkedList/Program.cs)
 
 [4. Kth from the end](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/Challenges/LinkedList/LinkedList/Program.cs)
 
