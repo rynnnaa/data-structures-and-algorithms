@@ -14,3 +14,7 @@ The approach taken was to create two linked lists as static methods and then mer
 Big O Time = O(n) - The method must first traverse the entire list to measure the length. Then merge the list to return a zipped list.
 
 ![Whiteboard](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/ll_merge.jpg)
+
+Output:
+
+[Output](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/MergeLists.PNG)
