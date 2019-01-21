@@ -1,6 +1,5 @@
 # Singly Linked List
 Implement a Singly Linked List Data Structure
-
 Append values, Insert Before, Insert After
 
 ## Challenge
@@ -8,12 +7,15 @@ Create a Node class that has properties for the value stored in the Node, and a 
 Define a method called print which takes in no arguments and outputs all of the current Node values in the Linked List.
 
 ## Approach & Efficiency
+The approach taken was to reference the linked list and create the required methods. Then test the methods to see if they passed three assertions for each method.
 Big O
 Time O(n)
 Space O(n)
 
 ## API
-Insert, Include and Print are all implemented methods that insert include and print linked list.
+The Insert method takes any value as an argument and adds a new node with that value to the head of the list with an O(1) time performance.
+The Includeds method take any value as an argument and returns a boolean result depending on whether that value exists as a Node's vlaue somewhere within the list.
+The Print method takes in no arguments and outputs all sof the current Node values in the Linked List.
 
 OutPut:
 
