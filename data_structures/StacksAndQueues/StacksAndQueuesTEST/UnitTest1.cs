@@ -190,6 +190,29 @@ namespace StacksAndQueuesTEST
             Assert.Equal(9, queue.Rear.Value);
        
         }
+
+        [Fact]
+        public void DequeueWorks()
+        {
+            Node node = new Node(1);
+            Queue queue = new Queue(node);
+            queue.Enqueue(3);
+            queue.Enqueue(4);
+            queue.Enqueue(3);
+
+
+            //Act
+            queue.Dequeue();
+
+            //Assert.
+            Assert.Equal(3, queue.Front.Value);
+        }
+
+        [Fact]
+        public void DequeueWorks2()
+        {
+
+        }
     }
 
   
