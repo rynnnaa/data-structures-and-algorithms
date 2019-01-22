@@ -1,6 +1,7 @@
 ﻿using System;
+using StacksAndQueues.Classes;
 
-namespace StacksAndQueues
+namespace StacksAndQueues.Classes
 {
     class Program
     {
