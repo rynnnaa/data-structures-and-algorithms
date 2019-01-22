@@ -244,6 +244,29 @@ namespace StacksAndQueuesTEST
             Assert.Equal(6, queue.Front.Value);
         
         }
+
+        [Fact]
+        public void QueuePeekWorks()
+        {
+            Node node = new Node(2);
+            Queue queue = new Queue(node);
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
+
+            //Act
+            Node peeks = queue.Peek();
+
+            //Assert
+            Assert.Equal(2, peeks.Value);
+        }
+
+        [Fact]
+        public void QueuePeekWorks2()
+        {
+            Node node = new Node(4);
+            Queue queue = new Queue(node);
+        }
     }
 
   
