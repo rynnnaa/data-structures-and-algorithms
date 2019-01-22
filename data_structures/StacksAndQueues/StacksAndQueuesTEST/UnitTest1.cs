@@ -102,6 +102,17 @@ namespace StacksAndQueuesTEST
         public void PeekWorks()
         {
             //Arrange
+            Stack stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+
+            //Act
+            Node peeks = stack.Peek();
+
+            //Assert
+            Assert.Equal(3, peeks.Value);
+
         }
     }
 }
