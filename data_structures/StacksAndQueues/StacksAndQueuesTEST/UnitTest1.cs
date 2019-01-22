@@ -221,11 +221,29 @@ namespace StacksAndQueuesTEST
             queue.Enqueue(6);
 
             //Act
+            queue.Dequeue();
+
+       
             //Assert
             Assert.Equal(4, queue.Front.Value);
         }
+        [Fact]
+        public void DequeueWorks3()
+        {
+            //Arrange
+            Node node = new Node(1);
+            Queue queue = new Queue(node);
+            queue.Enqueue(6);
+            queue.Enqueue(7);
+            queue.Enqueue(8);
 
+            //Act
+            queue.Dequeue();
 
+            //Assert
+            Assert.Equal(6, queue.Front.Value);
+        
+        }
     }
 
   
