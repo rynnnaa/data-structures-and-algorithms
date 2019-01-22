@@ -34,5 +34,11 @@ namespace StacksAndQueues.Classes
 
             return temp;
         }
+
+        //Peek
+        public Node Peek()
+        {
+            return Front;
+        }
     }
 }
