@@ -194,6 +194,8 @@ namespace StacksAndQueuesTEST
         [Fact]
         public void DequeueWorks()
         {
+
+            //Arrange
             Node node = new Node(1);
             Queue queue = new Queue(node);
             queue.Enqueue(3);
@@ -211,8 +213,19 @@ namespace StacksAndQueuesTEST
         [Fact]
         public void DequeueWorks2()
         {
+            //Arrange
+            Node node = new Node(1);
+            Queue queue = new Queue(node);
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+            queue.Enqueue(6);
 
+            //Act
+            //Assert
+            Assert.Equal(4, queue.Front.Value);
         }
+
+
     }
 
   
