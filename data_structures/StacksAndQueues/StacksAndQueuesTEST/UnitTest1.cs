@@ -116,7 +116,7 @@ namespace StacksAndQueuesTEST
         }
 
         [Fact]
-        public void PeekWords2()
+        public void PeekWorks2()
         {
             //Arrange
             Stack stack = new Stack();
@@ -130,6 +130,35 @@ namespace StacksAndQueuesTEST
             //Assert
             Assert.Equal(6, peeks.Value);
            
+        }
+
+        [Fact]
+        public void PeekWorks3()
+        {
+            //Arrange
+            Stack stack = new Stack();
+            stack.Push(3);
+
+            //Act
+            Node peeks = stack.Peek();
+
+            //Assert
+            Assert.Equal(3, peeks.Value);
+
+        }
+
+        [Fact]
+        public void EnqueueWorks()
+        {
+            //Arrange
+            Node node = new Node(1);
+            Queue queue = new Queue(node);
+
+            //Act
+            queue.Enqueue(2);
+
+            //Assert
+            Assert.Equal(2, queue.Rear.Value);
         }
     }
 }
