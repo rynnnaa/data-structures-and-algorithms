@@ -64,7 +64,44 @@ namespace StacksAndQueuesTEST
             //Assert
             Assert.Equal(2, stack.Top.Value);
         }
-
        
+        [Fact]
+        public void PopWorks2()
+        {
+
+            //Arrange
+            Stack stack = new Stack();
+            stack.Push(8);
+            stack.Push(9);
+
+            //Act
+            stack.Pop();
+
+            //Assert
+            Assert.Equal (8, stack.Top.Value);
+
+        }
+
+        [Fact]
+        public void PopWorks3()
+        {
+            //Arrange
+            Stack stack = new Stack();
+            stack.Push(5);
+            stack.Push(6);
+
+            //Act
+            stack.Pop();
+
+            //Assert
+            Assert.Equal(5, stack.Top.Value);
+
+        }
+       
+        [Fact]
+        public void PeekWorks()
+        {
+            //Arrange
+        }
     }
 }
