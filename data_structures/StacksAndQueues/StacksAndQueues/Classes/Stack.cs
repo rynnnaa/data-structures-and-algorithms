@@ -21,6 +21,20 @@ namespace StacksAndQueues.Classes
         public void Push(int value)
         {
             Node node = new Node(value);
+            node.Next = Top;
+            Top = node;
+        }
+
+        public Node Pop()
+        {
+            // create a temp
+            Node temp = Top;
+            //set top to the next node in the stack
+            Top = Top.Next;
+            // clear the reference of next on the temp
+            temp.Next = null;
+            // return the node
+            return temp;
         }
     }
 }
