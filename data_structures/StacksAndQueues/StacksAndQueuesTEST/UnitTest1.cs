@@ -64,7 +64,7 @@ namespace StacksAndQueuesTEST
             //Assert
             Assert.Equal(2, stack.Top.Value);
         }
-       
+
         [Fact]
         public void PopWorks2()
         {
@@ -78,7 +78,7 @@ namespace StacksAndQueuesTEST
             stack.Pop();
 
             //Assert
-            Assert.Equal (8, stack.Top.Value);
+            Assert.Equal(8, stack.Top.Value);
 
         }
 
@@ -97,7 +97,7 @@ namespace StacksAndQueuesTEST
             Assert.Equal(5, stack.Top.Value);
 
         }
-       
+
         [Fact]
         public void PeekWorks()
         {
@@ -129,7 +129,7 @@ namespace StacksAndQueuesTEST
 
             //Assert
             Assert.Equal(6, peeks.Value);
-           
+
         }
 
         [Fact]
@@ -160,5 +160,37 @@ namespace StacksAndQueuesTEST
             //Assert
             Assert.Equal(2, queue.Rear.Value);
         }
+
+        [Fact]
+        public void EnqueueWorks2()
+        {
+            //Arrange
+            Node node = new Node(1);
+            Queue queue = new Queue(node);
+
+            //Act
+            queue.Enqueue(3);
+
+            //Assert
+            Assert.Equal(3, queue.Rear.Value);
+        }
+
+        [Fact]
+        public void EnqueueWorks3()
+        {
+            //Arrange
+            Node node = new Node(1);
+            Queue queue = new Queue(node);
+
+            //Act
+            queue.Enqueue(9);
+
+
+            //Assert
+            Assert.Equal(9, queue.Rear.Value);
+       
+        }
     }
+
+  
 }
