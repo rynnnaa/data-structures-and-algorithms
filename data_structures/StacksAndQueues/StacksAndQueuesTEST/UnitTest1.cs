@@ -114,5 +114,22 @@ namespace StacksAndQueuesTEST
             Assert.Equal(3, peeks.Value);
 
         }
+
+        [Fact]
+        public void PeekWords2()
+        {
+            //Arrange
+            Stack stack = new Stack();
+            stack.Push(4);
+            stack.Push(5);
+            stack.Push(6);
+
+            //Act
+            Node peeks = stack.Peek();
+
+            //Assert
+            Assert.Equal(6, peeks.Value);
+           
+        }
     }
 }
