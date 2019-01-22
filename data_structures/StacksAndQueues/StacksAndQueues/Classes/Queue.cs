@@ -23,5 +23,16 @@ namespace StacksAndQueues.Classes
             Rear.Next = node;
             Rear = node;
         }
+
+        //Dequeue
+
+        public Node Dequeue()
+        {
+            Node temp = Front;
+            Front = Front.Next;
+            temp.Next = null;
+
+            return temp;
+        }
     }
 }
