@@ -20,6 +20,8 @@ namespace StacksAndQueues.Classes
         public void Enqueue(int value)
         {
             Node node = new Node(value);
+            Rear.Next = node;
+            Rear = node;
         }
     }
 }
