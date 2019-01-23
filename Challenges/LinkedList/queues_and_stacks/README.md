@@ -1,3 +1,6 @@
+Developer: Ryna
+Contributors: Jason Few, Dez Teague
+
 # Implement a Queue using two Stacks.
 Implement a queue using two stacks 
 
