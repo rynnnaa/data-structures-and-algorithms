@@ -5,49 +5,57 @@ namespace mergeLinkList
 {
     public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// creates two lists and call method to merge
+        /// </summary>
+        /// <param name="args"></param>
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
-            LList list = new LList();
-            list.Insert(1);
-            list.Insert(3);
-            list.Insert(5);
-            list.Insert(7);
+            LList list1 = new LList();
+            list1.Insert(1);
+            list1.Insert(3);
+            list1.Insert(5);
+            list1.Insert(7);
+            list1.Insert(9);
 
-            LList listTwo = new LList();
-            list.Insert(2);
-            list.Insert(4);
-            list.Insert(6);
-            list.Insert(8);
+            LList list2 = new LList();
+            list2.Insert(2);
+            list2.Insert(4);
+            list2.Insert(6);
+            list2.Insert(8);
+            list2.Insert(10);
 
-            Merge(list, listTwo);
+            Merge(list1, list2);
+
         }
 
         /// <summary>
-        /// Merging two linked list  in a zipper form
+        /// Merge two link lists in zipper formation
         /// </summary>
         /// <param name="list"></param>
-        /// <param name="listTwo"></param>
-        /// <returns>New LList listThree</returns>
-
-        public static LList Merge(LList list, LList listTwo)
+        /// <param name="list2"></param>
+        /// <returns>New LList</returns>
+        public static LList Merge(LList list, LList list2)
         {
-            LList listThree = new LList();
+            LList list3 = new LList();
             list.Current = list.Head;
-            listTwo.Current = listTwo.Head;
+            list2.Current = list2.Head;
 
-            while (list.Current != null || listTwo.Current != null)
+            while (list.Current != null || list2.Current != null)
             {
-                listThree.Insert(listTwo.Current.Value);
-                listThree.Insert(listTwo.Current.Value);
+                list3.Insert(list2.Current.Value);
+                list3.Insert(list.Current.Value);
+
 
                 list.Current = list.Current.Next;
-                listTwo.Current = listTwo.Current.Next;
+                list2.Current = list2.Current.Next;
             }
-            listThree.Print();
-            return listThree;
+
+            list3.Print();
+            return list3;
         }
-        
+
+
     }
 }
