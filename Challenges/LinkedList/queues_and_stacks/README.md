@@ -12,4 +12,4 @@ Time O(1)
 Space O(1)
 
 ## Solution
-![Whiteboard]()
+![Whiteboard](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/queue_with_stacks.jpg)
