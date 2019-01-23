@@ -44,6 +44,24 @@ namespace queue_with_stacksTEST
         }
 
 
+        [Fact]
+        public void EnqueueWorks3()
+        {
+            //arrange
+            Stack stack = new Stack();
+
+            PseudoQueue queue = new PseudoQueue();
+
+            //act 
+
+            queue.Enqueue(stack, 3);
+            queue.Enqueue(stack, 4);
+            queue.Enqueue(stack, 5);
+
+            //assert
+            Equals(stack.Top.Value);
+        }
+
 
     }
 }
