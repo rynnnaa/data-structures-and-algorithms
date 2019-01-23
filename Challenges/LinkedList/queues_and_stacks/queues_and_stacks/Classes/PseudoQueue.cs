@@ -28,7 +28,11 @@ namespace queues_and_stacks.Classes
             }
             stack2.Pop();
         }
-    }
 
+        public void Enqueue(Stack stack, int value)
+        {
+            stack.Push(value);
+        }
+    }
 
 }
