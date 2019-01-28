@@ -119,6 +119,63 @@ namespace XUnitTestProject1
             Assert.Equal(5, result[4]);
 
         }
-        
+
+        [Fact]
+        public void PostOrderWorks()
+        {
+            //arrange
+            Node node = new Node(1);
+            BinaryTree tree = new BinaryTree(node);
+            node.Left = new Node(2);
+            node.Left.Left = new Node(3);
+            node.Left.Right = new Node(4);
+            node.Right = new Node(5);
+
+            //act
+            int[] result = tree.PostOrder(node);
+
+            //assert
+            Assert.Equal(3, result[0]);
+
+        }
+
+        [Fact]
+        public void PostOrderWorks2()
+        {
+            //arrange
+            Node node = new Node(1);
+            BinaryTree tree = new BinaryTree(node);
+            node.Left = new Node(2);
+            node.Left.Left = new Node(3);
+            node.Left.Right = new Node(4);
+            node.Right = new Node(5);
+
+            //act
+            int[] result = tree.PostOrder(node);
+
+            //assert
+            Assert.Equal(4, result[1]);
+
+        }
+
+        [Fact]
+        public void PostOrderWorksAgain3()
+        {
+            //arrange
+            Node node = new Node(1);
+            BinaryTree tree = new BinaryTree(node);
+            node.Left = new Node(2);
+            node.Left.Left = new Node(3);
+            node.Left.Right = new Node(4);
+            node.Right = new Node(5);
+
+            //act
+            int[] result = tree.PostOrder(node);
+
+            //assert
+            Assert.Equal(5, result[3]);
+
+        }
+
     }
 }
