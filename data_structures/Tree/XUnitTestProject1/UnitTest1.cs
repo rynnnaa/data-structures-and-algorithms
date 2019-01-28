@@ -177,5 +177,106 @@ namespace XUnitTestProject1
 
         }
 
+        [Fact]
+        public void addBetween1()
+        {
+            //arrange
+            Node node = new Node(3);
+            node.Left = new Node(1);
+            BinarySearchTree tree = new BinarySearchTree(node);
+
+            //act
+            tree.Add(node, 2);
+
+            //assert
+            Assert.Equal(2, tree.Root.Left.Right.Value);
+
+        }
+
+        [Fact]
+        public void addBetween2()
+        {
+            //arrange
+            Node node = new Node(4);
+            node.Left = new Node(1);
+            BinarySearchTree tree = new BinarySearchTree(node);
+
+            //act
+            tree.Add(node, 3);
+
+            //assert
+            Assert.Equal(3, tree.Root.Left.Right.Value);
+
+        }
+
+        [Fact]
+        public void addBetween3()
+        {
+            //arrange
+            Node node = new Node(10);
+            node.Left = new Node(4);
+            BinarySearchTree tree = new BinarySearchTree(node);
+
+            //act
+            tree.Add(node, 7);
+
+            //assert
+            Assert.Equal(7, tree.Root.Left.Right.Value);
+
+        }
+
+        [Fact]
+        public void ContainsWorks()
+        {
+            //arrange
+            Node node = new Node(1);
+            BinarySearchTree tree = new BinarySearchTree(node);
+            tree.Add(tree.Root, 2);
+            tree.Add(tree.Root, 3);
+            tree.Add(tree.Root, 4);
+
+            //act
+            bool result = tree.Contains(2);
+
+            //assert
+            Assert.True(result);
+
+        }
+
+        [Fact]
+        public void ContainsWorks2()
+        {
+            //arrange
+            Node node = new Node(1);
+            BinarySearchTree tree = new BinarySearchTree(node);
+            tree.Add(tree.Root, 2);
+            tree.Add(tree.Root, 3);
+            tree.Add(tree.Root, 4);
+
+            //act
+            bool result = tree.Contains(3);
+
+            //assert
+            Assert.True(result);
+
+        }
+
+        [Fact]
+        public void NotContainsWorks()
+        {
+            //arrange
+            Node node = new Node(1);
+            BinarySearchTree tree = new BinarySearchTree(node);
+            tree.Add(tree.Root, 2);
+            tree.Add(tree.Root, 3);
+            tree.Add(tree.Root, 4);
+
+            //act
+            bool result = tree.Contains(14);
+
+            //assert
+            Assert.False(result);
+
+        }
     }
 }
