@@ -29,8 +29,7 @@ namespace Tree.Classes
         /// <param name="value"></param>
         /// <returns>node</returns>
         /// 
-        public Node Add(Node root, int value)
-        {
+        public Node Add(Node root, int value){
 
             Node node = new Node(value);
 
@@ -57,18 +56,43 @@ namespace Tree.Classes
                 }
             }
 
-            if (value <= parent.Value)
-            {
-                parent.Left = node;
-            }
-            else
-            {
-                parent.Right = node;
-            }
+                if (value <= parent.Value)
+                {
+                    parent.Left = node;
+                }
+                else
+                {
+                    parent.Right = node;
+                }
 
             return node;
         }
 
-     
+        /// <summary>
+        /// Searches tree for passed in value, will search left or right depening on whether value is greater then or less then root.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>bool</returns>
+        public bool Contains(int value)
+        {
+            if (Root.Value == value) { return true; }
+
+            while (Root != null)
+            {
+                if (Root.Value == value)
+                {
+                    return true;
+                }
+                else if (value < Root.Value)
+                {
+                    Root = Root.Left;
+                }
+                else if (value > Root.Value)
+                {
+                    Root = Root.Right;
+                }
+            }
+            return false;
+        }
     }
 }
