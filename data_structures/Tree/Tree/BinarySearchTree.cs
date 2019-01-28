@@ -1,10 +1,98 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Tree.Classes;
 
-namespace Tree
+namespace Tree.Classes
 {
-    class BinarySearchTree
+    public class BinarySearchTree
     {
+        public Node Root { get; set; }
+
+        public BinarySearchTree(Node node)
+        {
+            if (Root == null)
+            {
+                Root = node;
+            }
+
+            else
+            {
+                Add(Root, node.Value);
+            }
+        }
+
+        /// <summary>
+        /// Using greater than or less than logic to determine where to add the node
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="value"></param>
+        /// <returns>node</returns>
+        /// 
+        public Node Add(Node root, int value){
+
+            Node node = new Node(value);
+
+            if (root == null)
+            {
+                root = node;
+                return node;
+            }
+
+            Node parent = null;
+
+            while (root != null)
+            {
+                parent = root;
+
+                if (value < root.Value)
+                {
+                    root = root.Left;
+                }
+
+                else
+                {
+                    root = root.Right;
+                }
+            }
+
+                if (value <= parent.Value)
+                {
+                    parent.Left = node;
+                }
+                else
+                {
+                    parent.Right = node;
+                }
+
+            return node;
+        }
+
+        /// <summary>
+        /// Searches tree for passed in value, will search left or right depening on whether value is greater then or less then root.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>bool</returns>
+        public bool Contains(int value)
+        {
+            if (Root.Value == value) { return true; }
+
+            while (Root != null)
+            {
+                if (Root.Value == value)
+                {
+                    return true;
+                }
+                else if (value < Root.Value)
+                {
+                    Root = Root.Left;
+                }
+                else if (value > Root.Value)
+                {
+                    Root = Root.Right;
+                }
+            }
+            return false;
+        }
     }
 }
