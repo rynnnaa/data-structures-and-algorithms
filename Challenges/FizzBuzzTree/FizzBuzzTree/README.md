@@ -1,5 +1,5 @@
 Fizz Buzz Tree
-Traverse throw a tree and fine values that are divisible by certain values and change the values to fizz, buzz or fizzbuzz
+Traverse a tree and find values that are divisible by certain values and change the values to fizz, buzz or fizzbuzz
 
 assigned this challenge, complete whiteboard exercise and solution.
 
