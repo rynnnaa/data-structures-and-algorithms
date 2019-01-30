@@ -6,4 +6,10 @@
     <RootNamespace>breadth_first_traversal</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Tree">
+      <HintPath>..\..\..\data_structures\Tree\Tree\bin\Debug\netcoreapp2.2\Tree.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
