@@ -8,12 +8,7 @@ namespace breadth_first_traversal
     {
         static void Main(string[] args)
         {
-            Tree tree = GetTree();
-        }
-
-        public void BreadthFirst(Tree)
-        {
-
+            
         }
 
     }
