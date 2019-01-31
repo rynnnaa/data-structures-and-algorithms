@@ -8,7 +8,7 @@ Write a function called find-maximum-value which takes binary tree as its only i
 I took the approach of doing a traversal through the tree and comparing the value of the node to the max node
 Big O
 Time O(n)
-Space O(w)
+Space O(h)
 
 ## Solution
 
