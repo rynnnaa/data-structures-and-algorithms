@@ -9,7 +9,32 @@ namespace Tree.Classes
     {
         public Node Root { get; set; }
 
+
         public List<object> ArrayList = new List<object>();
+
+        public BinaryTree()
+        {
+            Root = null;
+        }
+
+        /// <summary>
+        /// just create a binary tree here.Give it several nodes
+        /// </summary>
+        public void CreateTree()
+        {
+            Root = new Node(3);
+            Root.Left = new Node(59);
+            Root.Right = new Node(8);
+            Root.Left.Left = new Node(99);
+            Root.Left.Right = new Node(2);
+            Root.Right.Left= new Node(19);
+            Root.Right.Right = new Node(3);
+        }
+
+
+
+
+        public List<int> ArrList = new List<int>();
 
         public BinaryTree(Node node)
         {

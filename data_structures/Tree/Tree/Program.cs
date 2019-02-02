@@ -7,6 +7,7 @@ namespace Tree
     {
         static void Main(string[] args)
         {
+
             Node node = new Node(1);
             node.Left = new Node(2);
             node.Left.Left = new Node(3);
