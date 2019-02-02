@@ -50,6 +50,20 @@ namespace Tree
             BSTree.Add(BSTree.Root, 5);
             BSTree.Add(BSTree.Root, 6);
 
+
+            BinaryTree BST = new BinaryTree(BSTree.Root);
+
+            object[] result3 = BST.InOrder(BST.Root);
+            foreach (object i in result3)
+            {
+                Console.Write($"[{i}]");
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine($"Does 4 exist in the tree of 1-6? {BSTree.Contains(4)}");
+            Console.WriteLine($"Does 7 exist in the tree of 1-6? {BSTree.Contains(7)}");
+
         }
 
     }
