@@ -15,48 +15,51 @@ namespace Tree.Classes
             {
                 Root = node;
             }
-
             else
             {
                 Add(Root, node.Value);
             }
         }
 
+        public BinarySearchTree()
+        {
+
+        }
+
         /// <summary>
-        /// Using greater than or less than logic to determine where to add the node
+        /// Traverses the nodes of the binary search tree that are directly greater than of less than the given value. When it reaches a leaf, it creates a new node in the position greater than or less than that leaf.
         /// </summary>
-        /// <param name="root"></param>
-        /// <param name="value"></param>
-        /// <returns>node</returns>
-        /// 
-        public Node Add(Node root, int value){
-
-            Node node = new Node(value);
-
-            if (root == null)
+        /// <param name="root">Root of the binary search tree</param>
+        /// <param name="value">Value of the node to create in order on the tree</param>
+        /// <returns>New node</returns>
+        public Node Add(Node root, object value)
+        {
+            try
             {
-                root = node;
-                return node;
-            }
+                Node node = new Node(value);
 
-            Node parent = null;
-
-            while (root != null)
-            {
-                parent = root;
-
-                if (value < root.Value)
+                if (Root == null)
                 {
-                    root = root.Left;
+                    Root = node;
+                    return node;
                 }
 
-                else
-                {
-                    root = root.Right;
-                }
-            }
+                Node parent = null;
 
-                if (value <= parent.Value)
+                while (root != null)
+                {
+                    parent = root;
+                    if ((int)value < (int)root.Value)
+                    {
+                        root = root.Left;
+                    }
+                    else
+                    {
+                        root = root.Right;
+                    }
+                }
+
+                if ((int)value <= (int)parent.Value)
                 {
                     parent.Left = node;
                 }
@@ -64,34 +67,46 @@ namespace Tree.Classes
                 {
                     parent.Right = node;
                 }
-
-            return node;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return root;
         }
 
         /// <summary>
-        /// Searches tree for passed in value, will search left or right depening on whether value is greater then or less then root.
+        /// Searches the tree for a matching node value, traversing left if the target value is less than the node value, or right if the target value is greater than the node value. Returns true if the Node is found, If not, return false.
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns>bool</returns>
+        /// <param name="value">Searching for The Node Value</param>
+        /// <returns>True if found, false if not</returns>
         public bool Contains(int value)
         {
-            if (Root.Value == value) { return true; }
-
-            while (Root != null)
+            try
             {
-                if (Root.Value == value)
+                if ((int)Root.Value == (int)value) { return true; }
+
+                while (Root != null)
                 {
-                    return true;
-                }
-                else if (value < Root.Value)
-                {
-                    Root = Root.Left;
-                }
-                else if (value > Root.Value)
-                {
-                    Root = Root.Right;
+                    if ((int)Root.Value == (int)value)
+                    {
+                        return true;
+                    }
+                    else if ((int)value < (int)Root.Value)
+                    {
+                        Root = Root.Left;
+                    }
+                    else if ((int)value > (int)Root.Value)
+                    {
+                        Root = Root.Right;
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
             return false;
         }
     }
