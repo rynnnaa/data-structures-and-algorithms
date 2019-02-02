@@ -15,8 +15,23 @@ namespace Tree
             node.Right.Left = new Node(6);
             node.Right.Right = new Node(7);
 
-            BinaryTree tree = new BinaryTree(node);
+            BinaryTree tree1 = new BinaryTree(node);
             BinaryTree tree2 = new BinaryTree(node);
+
+            object[] result = tree1.PreOrder(node);
+            foreach (object i in result)
+            {
+                Console.Write($"[{i}]");
+            }
+
+            Console.WriteLine();
+            tree1.ArrayList.Clear();
+
+            object[] resultIn = tree1.InOrder(node);
+            foreach (object i in resultIn)
+            {
+                Console.Write($"[{i}]");
+            }
         }
     }
 }
