@@ -40,10 +40,6 @@ namespace Tree.Classes
         {
             Root = node;
         }
-        public BinaryTree()
-        {
-
-        }
 
         /// <summary>
         /// Starts with the root, will return root first before going to  it's children

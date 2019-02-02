@@ -6,6 +6,22 @@ namespace queues_and_stacks.Classes
 {
     public class PseudoQueue
     {
+
+        public Stack queueStack {get; set;}
+        public Stack tempStack { get; set; }
+
+        //create new stack instances 
+        public PseudoQueue()
+        {
+            queueStack = new Stack();
+            tempStack = new Stack();
+        }
+
+        public void Enqueue(Stack StackOne, int value)
+        {
+            //demonstrate enqueue by pushing values into stack one
+            StackOne.Push(value);
+        }
         /// <summary>
         /// Pops node from top of Stack2, if stack2 is empty, it calls the method to fill from stack1
         /// </summary>
@@ -26,11 +42,6 @@ namespace queues_and_stacks.Classes
                     stack2.Push(stack.Pop().Value);
             }
             stack2.Pop();
-        }
-
-        public void Enqueue(Stack stack, int value)
-        {
-            stack.Push(value);
         }
     }
 
