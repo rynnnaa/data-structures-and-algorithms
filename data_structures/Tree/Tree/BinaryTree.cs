@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,11 +9,15 @@ namespace Tree.Classes
     {
         public Node Root { get; set; }
 
-        public List<object> ArrList = new List<object>();
+        public List<object> ArrayList = new List<object>();
 
         public BinaryTree(Node node)
         {
             Root = node;
+        }
+        public BinaryTree()
+        {
+
         }
 
         /// <summary>
@@ -21,21 +26,27 @@ namespace Tree.Classes
         /// <param name="root"></param>
         /// <returns>An array</returns>
         /// 
-        public int[] PreOrder(Node root)
+        public object[] PreOrder(Node root)
         {
-            ArrList.Add(root.Value);
-
-            if (root.Left != null)
+            try
             {
-                PreOrder(root.Left);
+                ArrayList.Add(root.Value);
+
+                if (root.Left != null)
+                {
+                    PreOrder(root.Left);
+                }
+                if (root.Right != null)
+                {
+                    PreOrder(root.Right);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
 
-            if (root.Right != null)
-            {
-                PreOrder(root.Right);
-            }
-
-            return ArrList.ToArray();
+            return ArrayList.ToArray();
         }
 
         /// <summary>
@@ -43,21 +54,21 @@ namespace Tree.Classes
         /// </summary>
         /// <param name="root"></param>
         /// <returns>An array</returns>
-        public int[] InOrder(Node root)
+        public object[] InOrder(Node root)
         {
             if (root.Left != null)
             {
                 InOrder(root.Left);
             }
 
-            ArrList.Add(root.Value);
+            ArrayList.Add(root.Value);
 
             if (root.Right != null)
             {
                 InOrder(root.Right);
             }
 
-            return ArrList.ToArray();
+            return ArrayList.ToArray();
         }
 
         /// <summary>
@@ -66,7 +77,7 @@ namespace Tree.Classes
         /// <param name="root"></param>
         /// <returns>An array</returns>
         /// 
-        public int[] PostOrder(Node root)
+        public object[] PostOrder(Node root)
         {
             if (root.Left != null)
             {
@@ -78,9 +89,11 @@ namespace Tree.Classes
                 PostOrder(root.Right);
             }
 
-            ArrList.Add(root.Value);
+            ArrayList.Add(root.Value);
 
-            return ArrList.ToArray();
+            return ArrayList.ToArray();
         }
+
+
     }
 }
