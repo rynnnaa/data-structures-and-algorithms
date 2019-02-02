@@ -32,6 +32,15 @@ namespace Tree
             {
                 Console.Write($"[{i}]");
             }
+            Console.WriteLine();
+
+            object[] result2 = tree2.PostOrder(node);
+            foreach (object i in result2)
+            {
+                Console.Write($"[{i}]");
+            }
+
+            Console.WriteLine();
         }
     }
 }
