@@ -41,6 +41,16 @@ namespace Tree
             }
 
             Console.WriteLine();
+
+            BinarySearchTree BSTree = new BinarySearchTree();
+            BSTree.Add(BSTree.Root, 1);
+            BSTree.Add(BSTree.Root, 2);
+            BSTree.Add(BSTree.Root, 3);
+            BSTree.Add(BSTree.Root, 4);
+            BSTree.Add(BSTree.Root, 5);
+            BSTree.Add(BSTree.Root, 6);
+
         }
+
     }
 }
