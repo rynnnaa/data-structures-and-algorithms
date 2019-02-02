@@ -8,7 +8,7 @@ namespace Tree.Classes
     {
         public Node Root { get; set; }
 
-        public List<int> ArrList = new List<int>();
+        public List<object> ArrList = new List<object>();
 
         public BinaryTree(Node node)
         {
