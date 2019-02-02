@@ -19,7 +19,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.PreOrder(node);
+            object[] result = tree.PreOrder(node);
 
             //assert
             Assert.Equal(1, result[0]);
@@ -38,7 +38,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.PreOrder(node);
+            object [] result = tree.PreOrder(node);
 
             //assert
             Assert.Equal(3, result[2]);
@@ -56,7 +56,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.PreOrder(node);
+            object[] result = tree.PreOrder(node);
 
             //assert
             Assert.Equal(5, result[4]);
@@ -75,7 +75,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.InOrder(node);
+            object[] result = tree.InOrder(node);
 
             //assert
             Assert.Equal(3, result[0]);
@@ -94,7 +94,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.InOrder(node);
+            object[] result = tree.InOrder(node);
 
             //assert
             Assert.Equal(4, result[2]);
@@ -113,7 +113,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.InOrder(node);
+            object[] result = tree.InOrder(node);
 
             //assert
             Assert.Equal(5, result[4]);
@@ -132,7 +132,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.PostOrder(node);
+            object[] result = tree.PostOrder(node);
 
             //assert
             Assert.Equal(3, result[0]);
@@ -151,7 +151,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.PostOrder(node);
+            object[] result = tree.PostOrder(node);
 
             //assert
             Assert.Equal(4, result[1]);
@@ -170,7 +170,7 @@ namespace XUnitTestProject1
             node.Right = new Node(5);
 
             //act
-            int[] result = tree.PostOrder(node);
+            object[] result = tree.PostOrder(node);
 
             //assert
             Assert.Equal(5, result[3]);

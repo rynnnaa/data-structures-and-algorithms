@@ -1,3 +1,6 @@
+Developer: Ryna
+Contributor: Andrew Hinojosa
+
 ### Implement A Queue Using Two Stacks
 TThis app contains the data structure for building and traversing a binary tree in Pre-Order, In-Order, and Post-Order, as well as building binary search trees, inserting new nodes in order, and testing to determine if a node value exists in the binary search tree.
 
@@ -27,5 +30,3 @@ Binary Tree:
 Binary Search Tree:
 - Add(Node root, int value) - Traverses the nodes of the binary search tree that are directly greater than of less than the given value. When it reaches a leaf, it creates a new node in the position greater than or less than that leaf.
 - Contains(int value) - Searches the tree for a matching node value, traversing left if the target value is less than the node value, or right if the target value is greater than the node value. Returns true is target is found, false if not.
-
-Ccntributors: Mike Goseco
