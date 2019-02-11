@@ -1,4 +1,5 @@
 ﻿using System;
+using Tree;
 using Tree.Classes;
 
 namespace BinaryTreeHeight
@@ -12,7 +13,19 @@ namespace BinaryTreeHeight
 
        public static int BinaryTreeHeight(Node root)
         {
+            int counter = 0;
+            if (root == null)
+            {
+                return 0;
+            }
 
+            if (root != null)
+            {
+                counter = Math.Max(BinaryTreeHeight(root.Left), BinaryTreeHeight(root.Right)) + 1;
+
+            }
+
+            return counter;
         }
     }
 }
