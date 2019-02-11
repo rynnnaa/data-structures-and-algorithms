@@ -8,10 +8,20 @@ namespace BinaryTreeHeight
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            Node node = new Node(1);
+            node.Left = new Node(1);
+            node.Left.Left = new Node(1);
+            node.Left.Right = new Node(1);
+            node.Right = new Node(1);
 
-       public static int BinaryTreeHeight(Node root)
+            Console.WriteLine(BinaryTreeHeight(node));
+        }
+        /// <summary>
+        /// returns the height of the binary tree by comparing left/right nodes
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public static int BinaryTreeHeight(Node root)
         {
             int counter = 0;
             if (root == null)
