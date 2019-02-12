@@ -14,14 +14,14 @@ namespace BinaryTreeHeight
             node.Left.Right = new Node(1);
             node.Right = new Node(1);
 
-            Console.WriteLine(BinaryTreeHeight(node));
+            Console.WriteLine(TreeHeight(node));
         }
         /// <summary>
         /// returns the height of the binary tree by comparing left/right nodes
         /// </summary>
         /// <param name="root"></param>
         /// <returns></returns>
-        public static int BinaryTreeHeight(Node root)
+        public static int TreeHeight(Node root)
         {
             int counter = 0;
             if (root == null)
@@ -31,7 +31,7 @@ namespace BinaryTreeHeight
 
             if (root != null)
             {
-                counter = Math.Max(BinaryTreeHeight(root.Left), BinaryTreeHeight(root.Right)) + 1;
+                counter = Math.Max(TreeHeight(root.Left), TreeHeight(root.Right)) + 1;
 
             }
 
