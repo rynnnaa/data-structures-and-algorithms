@@ -8,8 +8,8 @@ namespace queues_and_stacks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        
+
         }
-    }
+
+     }
 }
