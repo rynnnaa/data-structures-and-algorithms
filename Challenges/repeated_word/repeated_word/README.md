@@ -14,4 +14,4 @@ T O(nlogn).
 
 
 ## Solution
-![]
+![Whiteboard](https://github.com/rynnnaa/data-structures-and-algorithms/blob/master/assets/repeated_word.jpg)
