@@ -8,5 +8,10 @@ namespace tree_intersection
         {
             Console.WriteLine("Hello World!");
         }
+
+        public static int TreeIntersection (treeA, treeB)
+        {
+
+        }
     }
 }
