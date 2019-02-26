@@ -6,8 +6,8 @@ Extend your graph object with a breadth-first traversal method that accepts a st
 
 ## Approach & Efficiency
 Big O
-O(n)
-O(v)
+Time O(n)
+Space O(v) going through each vertex
 
 ## Solution
 ![Whiteboard](Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.)
