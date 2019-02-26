@@ -34,6 +34,13 @@ namespace graph
             return p1;
         }
 
+        public object GetNodes()
+        {
+            return AdjacencyList.Keys;
+        }
+
+
+
         
     }
 }
