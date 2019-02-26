@@ -10,8 +10,10 @@ namespace graph
         public Vertex vertex { get; set; }
         public List<Edges> Edges { get; set; }
 
-        public graph()
+        public graphz()
         {
+            AdjacencyList = new Dictionary<Vertex, List<Vertex>>();
+            Edges = new List<Edges>();
 
         }
 
@@ -28,7 +30,11 @@ namespace graph
         public Vertex AddEdge(Vertex p1, Vertex p2, int weight)
         {
             Edges.Add(new Edges(p1, p2, weight));
+            AdjacencyList[p1].Add(p2);
+            return p1;
         }
+
+        
     }
 }
 
