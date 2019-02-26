@@ -39,7 +39,10 @@ namespace graph
             return AdjacencyList.Keys;
         }
 
-
+        public object GetNeighbors(Vertex vertex)
+        {
+            return AdjacencyList[vertex];
+        }
 
         
     }
