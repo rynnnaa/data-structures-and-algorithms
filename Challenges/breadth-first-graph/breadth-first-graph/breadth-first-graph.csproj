@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>breadth_first_graph</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="graph">
+      <HintPath>..\..\..\data_structures\graph\graph\bin\Debug\netcoreapp2.2\graph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
