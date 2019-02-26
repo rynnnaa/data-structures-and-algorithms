@@ -31,9 +31,6 @@ Approach & Efficiency
 4 methods for this implementation.
 
 Add() assigns an index to the the Node. T O(1) sp O(1)
-
 Get() Searches through the list and returns a node. T O(n) sp O(n)
-
 GetAll() Will return all nodes. T O(n) sp O(n)
-
 Count() Returns number of nodes in graph. T O(1) sp O(n)
